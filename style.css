@@ -1,0 +1,273 @@
+/* Body & Base */
+html, body {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Orbitron', monospace, Consolas, monospace;
+    background: linear-gradient(135deg, #0f0f1c, #0a0a12);
+    color: #eee;
+    overflow-x: hidden;
+}
+
+/* Neon glow & glitch accent colors */
+:root {
+    --color-primary: #00ffcc;
+    --color-accent1: #ff0066;
+    --color-accent2: #ffcc00;
+    --color-accent3: #6600ff;
+    --color-shadow: #0ff9;
+    --color-bg-dark: #0a0a12;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 180px;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--color-bg-dark), #030312);
+    border-left: 4px solid var(--color-primary);
+    box-shadow:
+      inset 0 0 15px var(--color-primary),
+      -4px 0 25px var(--color-primary);
+    padding: 30px 20px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    overflow-y: auto;
+    z-index: 10;
+    backdrop-filter: saturate(180%) blur(6px);
+    -webkit-backdrop-filter: saturate(180%) blur(6px);
+}
+
+/* Sidebar heading */
+.sidebar h3 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--color-primary);
+    text-shadow:
+      0 0 8px var(--color-primary),
+      0 0 20px var(--color-primary);
+    border-bottom: 2px solid var(--color-accent2);
+    padding-bottom: 10px;
+}
+
+/* Sidebar nav links */
+.sidebar nav a {
+    display: block;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-bottom: 18px;
+    padding: 10px 6px;
+    border-left: 5px solid transparent;
+    position: relative;
+    transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effects with multi-color glow & glitch */
+.sidebar nav a:hover {
+    color: var(--color-accent1);
+    border-left-color: var(--color-accent1);
+    text-shadow:
+      0 0 10px var(--color-accent1),
+      0 0 20px var(--color-accent3),
+      0 0 30px var(--color-accent2);
+    transform: translateX(8px);
+    animation: glitch-text 0.4s infinite;
+}
+
+/* Glitch text flicker */
+@keyframes glitch-text {
+    0%, 100% {
+      text-shadow:
+        1px 0 var(--color-accent1),
+        -1px 0 var(--color-accent3),
+        2px 2px var(--color-accent2);
+    }
+    50% {
+      text-shadow:
+        -1px 0 var(--color-accent3),
+        1px 0 var(--color-accent1),
+        -2px -2px var(--color-accent2);
+    }
+}
+
+/* Scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+.sidebar::-webkit-scrollbar-track {
+    background: #111;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: var(--color-accent1);
+    border-radius: 4px;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .sidebar {
+      position: static;
+      width: 100%;
+      height: auto;
+      border-left: none;
+      border-top: 4px solid var(--color-primary);
+      box-shadow: 0 0 20px var(--color-primary);
+      padding: 20px 15px;
+      margin-top: 30px;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+
+    .sidebar h3 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      border-bottom: none;
+      text-shadow: none;
+      color: var(--color-primary);
+    }
+
+    .sidebar nav a {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      border-left: none;
+      padding: 10px 0;
+      color: var(--color-primary);
+      text-shadow: none;
+      transform: none;
+      animation: none;
+    }
+
+    .sidebar nav a:hover {
+      color: var(--color-accent1);
+      background: #ff006622;
+      border-left-color: transparent;
+      text-shadow: none;
+      transform: none;
+      animation: none;
+    }
+}
+
+/* Headings - bright and glitchy */
+h1, h2, h3 {
+    color: var(--color-primary);
+    text-shadow:
+      0 0 8px var(--color-primary),
+      0 0 20px var(--color-primary);
+    font-family: 'Orbitron', monospace;
+    text-transform: uppercase;
+}
+
+/* Body text */
+p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Links */
+a {
+    color: var(--color-accent2);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: var(--color-accent1);
+    text-shadow:
+      0 0 8px var(--color-accent1),
+      0 0 20px var(--color-accent3);
+}
+
+/* Sprachumschalter - Buttons unten */
+.lang-switcher {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 10, 18, 0.85);
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow:
+    0 0 10px var(--color-primary),
+    0 0 30px var(--color-primary);
+  z-index: 1000;
+  display: flex;
+  gap: 15px;
+  user-select: none;
+}
+
+.lang-switcher input[type="radio"] {
+  display: none;
+}
+
+/* Standardmäßig alle Sprachcontainer verstecken */
+.content > div {
+  display: none;
+}
+
+/* Sprache anzeigen, wenn Radio-Button ausgewählt */
+#lang-de:checked ~ .content .de {
+  display: block;
+}
+
+#lang-en:checked ~ .content .en {
+  display: block;
+}
+
+/* Sprachumschalter Buttons */
+.lang-switcher label.lang-switch {
+  cursor: pointer;
+  padding: 8px 18px;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 25px;
+  text-shadow:
+    0 0 8px var(--color-primary),
+    0 0 20px var(--color-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+  user-select: none;
+}
+
+/* Glitch Hover Effekt */
+@keyframes glitch-text {
+  0%, 100% {
+    text-shadow:
+      1px 0 var(--color-accent1),
+      -1px 0 var(--color-accent3),
+      2px 2px var(--color-accent2);
+  }
+  50% {
+    text-shadow:
+      -1px 0 var(--color-accent3),
+      1px 0 var(--color-accent1),
+      -2px -2px var(--color-accent2);
+  }
+}
+
+.lang-switcher label.lang-switch:hover {
+  color: var(--color-accent1);
+  border-color: var(--color-accent1);
+  box-shadow:
+    0 0 10px var(--color-accent1),
+    0 0 30px var(--color-accent3);
+  animation: glitch-text 0.4s infinite;
+}
+
+/* Aktiver Button */
+#lang-de:checked + label[for="lang-de"],
+#lang-en:checked + label[for="lang-en"] {
+  background-color: var(--color-primary);
+  color: var(--color-bg-dark);
+  box-shadow:
+    0 0 15px var(--color-primary),
+    0 0 40px var(--color-primary);
+  animation: none;
+}

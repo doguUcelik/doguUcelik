@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Dogu Ulas Celik – Web Developer Portfolio</title>
+
+    <link rel="stylesheet" href="style.css?v=2025-07">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.csszengarden.com/zengarden.xml">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dogu Ulas Celik">
+    <meta name="description" content="Portfolio website for Dogu Ulas Celik, a Computer Science student and aspiring Web Developer.">
+    <meta name="robots" content="all">
+
+    <style>
+      input[type="radio"] {
+        display: none;
+      }
+
+      /* Default: Deutsch anzeigen */
+      #lang-de:checked ~ .content .de {
+        display: block;
+      }
+      #lang-de:checked ~ .content .en {
+        display: none;
+      }
+
+      /* Wenn Englisch ausgewählt */
+      #lang-en:checked ~ .content .en {
+        display: block;
+      }
+      #lang-en:checked ~ .content .de {
+        display: none;
+      }
+
+      .content > div {
+        display: none;
+      }
+
+      /* Sprachumschalter - Buttons unten */
+      .lang-switcher {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(10, 10, 18, 0.85);
+        padding: 10px 20px;
+        border-radius: 30px;
+        box-shadow:
+          0 0 10px var(--color-primary, #00ffcc),
+          0 0 30px var(--color-primary, #00ffcc);
+        z-index: 1000;
+        display: flex;
+        gap: 15px;
+        user-select: none;
+      }
+
+      label.lang-switch {
+        cursor: pointer;
+        padding: 8px 18px;
+        font-family: 'Orbitron', monospace;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1rem;
+        color: var(--color-primary, #00ffcc);
+        border: 2px solid var(--color-primary, #00ffcc);
+        border-radius: 25px;
+        text-shadow:
+          0 0 8px var(--color-primary, #00ffcc),
+          0 0 20px var(--color-primary, #00ffcc);
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease,
+          box-shadow 0.3s ease;
+        user-select: none;
+      }
+
+      /* Glitch Hover Effekt */
+      @keyframes glitch-text {
+        0%, 100% {
+          text-shadow:
+            1px 0 var(--color-accent1, #ff0066),
+            -1px 0 var(--color-accent3, #6600ff),
+            2px 2px var(--color-accent2, #ffcc00);
+        }
+        50% {
+          text-shadow:
+            -1px 0 var(--color-accent3, #6600ff),
+            1px 0 var(--color-accent1, #ff0066),
+            -2px -2px var(--color-accent2, #ffcc00);
+        }
+      }
+
+      .lang-switcher label.lang-switch:hover {
+        color: var(--color-accent1, #ff0066);
+        border-color: var(--color-accent1, #ff0066);
+        box-shadow:
+          0 0 10px var(--color-accent1, #ff0066),
+          0 0 30px var(--color-accent3, #6600ff);
+        animation: glitch-text 0.4s infinite;
+      }
+
+      /* Aktiver Button */
+      #lang-de:checked + label[for="lang-de"],
+      #lang-en:checked + label[for="lang-en"] {
+        background-color: var(--color-primary, #00ffcc);
+        color: var(--color-bg-dark, #0a0a12);
+        box-shadow:
+          0 0 15px var(--color-primary, #00ffcc),
+          0 0 40px var(--color-primary, #00ffcc);
+        animation: none;
+      }
+
+    </style>
+</head>
+
+<body>
+
+  <!-- Sprachumschalter -->
+
+    <input type="radio" name="lang" id="lang-de" checked>
+    <label for="lang-de" class="lang-switch">Deutsch</label>
+
+    <input type="radio" name="lang" id="lang-en">
+    <label for="lang-en" class="lang-switch">English</label>
+ 
+
+  <div class="content">
+
+    <!-- DEUTSCH -->
+    <div class="de">
+      <div class="page-wrapper">
+
+        <section class="intro" id="zen-intro">
+          <header role="banner">
+            <h1>Hi und Willkommen</h1>
+          </header>
+
+          <div class="summary" id="zen-summary" role="article">
+            <p>Dies ist eine persönliche Portfolio-Website, die von mir, Dogu Ulas Celik, erstellt wurde.</p>
+          </div>
+
+          <div class="preamble" id="zen-preamble" role="article">
+            <h3>Über diese Website</h3>
+            <p>Diese Website zeigt meine Fähigkeiten als Webentwickler durch sauberes Design und responsives Layout.</p>
+          </div>
+        </section>
+
+        <main class="main supporting" id="zen-supporting" role="main">
+          <section class="explanation" id="zen-explanation" role="article">
+            <h3>Worum geht es hier?</h3>
+            <p>Diese Website dient als mein digitales Portfolio. Sie zeigt mein technisches Können, mein Designverständnis und meine Entwicklungskompetenzen.</p>
+          </section>
+
+          <section class="participation" id="zen-participation" role="article">
+            <h3>Wer bin ich?</h3>
+            <p>Ich bin ein Informatikstudent an der THM Gießen im 6. Semester.</p>
+            <p>Ich spezialisiere mich auf Frontend-Webentwicklung, responsives Design und moderne Webtechnologien.</p>
+          </section>
+
+          <section class="benefits" id="zen-benefits" role="article">
+            <h3>Warum diese Seite?</h3>
+            <p>Dieses Projekt begann als kreatives Ventil und wurde zu einer praktischen Demonstration meiner Fähigkeiten im Webdesign und Programmieren.</p>
+          </section>
+        </main>
+
+        <aside class="sidebar" role="complementary">
+          <div class="wrapper">
+            <div class="design-selection" id="design-selection">
+              <h3 class="select">Mehr entdecken:</h3>
+              <nav role="navigation">
+                <ul>
+                  <li>
+                    <a href="https://git.thm.de/ducl94" class="design-name">Mein GitLab-Profil</a>
+                  </li>
+                  <li>
+                    <a href="https://ducl94.git-pages.thm.de/css-zen-garden/" class="designer-name">Mein CSS Zen Garden Projekt</a>
+                  </li>
+                  <li>
+                    <a href="https://weberschelle-ducl94-a31b9a275fb6bb447fadf0aefa67eabae659ce69264.git-pages.thm.de/" class="design-name">Website für die Firma eines Freundes</a>
+                  </li>
+                  <li>
+                    <a href="mailto:dogu.uc@gmail.com">Kontakt</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+    <!-- ENGLISCH -->
+    <div class="en">
+      <div class="page-wrapper">
+
+        <section class="intro" id="zen-intro">
+          <header role="banner">
+            <h1>Hello and Welcome</h1>
+          </header>
+
+          <div class="summary" id="zen-summary" role="article">
+            <p>This is a personal portfolio website developed by me, Dogu Ulas Celik.</p>
+          </div>
+
+          <div class="preamble" id="zen-preamble" role="article">
+            <h3>About this Website</h3>
+            <p>This website showcases my skills as a web developer through clean design and responsive layout.</p>
+          </div>
+        </section>
+
+        <main class="main supporting" id="zen-supporting" role="main">
+          <section class="explanation" id="zen-explanation" role="article">
+            <h3>What’s This All About?</h3>
+            <p>This website serves as my digital portfolio. It demonstrates my technical proficiency, design sensibilities, and development capabilities.</p>
+          </section>
+
+          <section class="participation" id="zen-participation" role="article">
+            <h3>Who Am I?</h3>
+            <p>I'm a Computer Science student based in Hesse, Germany. I am currently in my 6th semester at the THM in Gießen,</p>
+            <p>I specialize in front-end web development, responsive design, and modern web technologies.</p>
+          </section>
+
+          <section class="benefits" id="zen-benefits" role="article">
+            <h3>Why This Site?</h3>
+            <p>This project began as a creative outlet and turned into a practical demonstration of my abilities in web design and coding.</p>
+          </section>
+        </main>
+
+        <aside class="sidebar" role="complementary">
+          <div class="wrapper">
+            <div class="design-selection" id="design-selection">
+              <h3 class="select">Explore More:</h3>
+              <nav role="navigation">
+                <ul>
+                  <li>
+                    <a href="https://git.thm.de/ducl94" class="design-name">My GitLab Profile</a>
+                  </li>
+                  <li>
+                    <a href="https://ducl94.git-pages.thm.de/css-zen-garden/" class="designer-name">My own CSS Zen Garden Project</a>
+                  </li>
+                  <li>
+                    <a href="https://weberschelle-ducl94-a31b9a275fb6bb447fadf0aefa67eabae659ce69264.git-pages.thm.de/" class="design-name">Website made for the Company of a Friend</a>
+                  </li>
+                  <li>
+                    <a href="mailto:dogu.uc@gmail.com">Contact Me</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="extra1" role="presentation"></div>
+  <div class="extra2" role="presentation"></div>
+  <div class="extra3" role="presentation"></div>
+  <div class="extra4" role="presentation"></div>
+  <div class="extra5" role="presentation"></div>
+  <div class="extra6" role="presentation"></div>
+
+</body>
+</html>
+

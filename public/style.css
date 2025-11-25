@@ -1,6 +1,6 @@
 /* Body & Base */
 html, body {
-    margin: 0; padding: 0; height: 100%;
+    margin: 0; padding: 1000px; height: 100%;
     font-family: 'Orbitron', monospace, Consolas, monospace;
     background: linear-gradient(135deg, #0f0f1c, #0a0a12);
     color: #eee;

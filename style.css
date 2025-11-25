@@ -1,6 +1,6 @@
 /* Body & Base */
 html, body {
-    margin: 0; padding: 0; height: 100%;
+    margin: 0; padding: 40; height: 100%;
     font-family: 'Orbitron', monospace, Consolas, monospace;
     background: linear-gradient(135deg, #0f0f1c, #0a0a12);
     color: #eee;
@@ -15,6 +15,12 @@ html, body {
     --color-accent3: #6600ff;
     --color-shadow: #0ff9;
     --color-bg-dark: #0a0a12;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding-right: 200px;
 }
 
 /* Sidebar */

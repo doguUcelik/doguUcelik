@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dogu Ulas Celik – Webentwickler</title>
+  <meta name="author" content="Dogu Ulas Celik">
+  <meta name="description" content="Portfolio von Dogu Ulas Celik – Webentwickler aus Gießen. Freelance Webentwicklung, moderne Websites, responsive Design.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dogu Ulas Celik – Webentwickler">
+  <meta property="og:description" content="Freelance Webentwicklung aus Gießen – moderne, schnelle Websites.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Hintergrundeffekte -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- Sprachumschalter -->
+  <input type="radio" name="lang" id="lang-de" checked hidden>
+  <input type="radio" name="lang" id="lang-en" hidden>
+
+  <div class="lang-bar" role="navigation" aria-label="Sprache wählen">
+    <label for="lang-de" class="lang-btn">DE</label>
+    <label for="lang-en" class="lang-btn">EN</label>
+  </div>
+
+  <!-- Hauptinhalt -->
+  <div class="site">
+
+    <!-- HEADER -->
+    <header class="hero">
+      <div class="hero-tag de-text">[ WEBENTWICKLER & STUDENT ]</div>
+      <div class="hero-tag en-text">[ WEB DEVELOPER & STUDENT ]</div>
+      <h1 class="hero-name">Dogu Ulas<br><span class="accent">Celik</span></h1>
+      <p class="hero-sub de-text">Freelance Webentwicklung · THM Gießen · Informatik 8. Semester</p>
+      <p class="hero-sub en-text">Freelance Web Dev · THM Gießen · Computer Science 8th Semester</p>
+      <div class="hero-cta">
+        <a href="mailto:dogu.uc@gmail.com" class="btn-primary de-text">Kontakt aufnehmen</a>
+        <a href="mailto:dogu.uc@gmail.com" class="btn-primary en-text">Get in Touch</a>
+        <a href="https://github.com/doguUcelik" class="btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </header>
+
+    <!-- ÜBER MICH -->
+    <section class="section" id="about">
+      <h2 class="section-title">
+        <span class="de-text">Über mich</span>
+        <span class="en-text">About Me</span>
+      </h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="de-text">Ich bin Informatikstudent im 8. Semester an der THM Gießen und betreibe nebenbei eine kleine Freelance-Webentwicklung unter dem Namen <strong>Webentwicklung Dogu Ulas Celik</strong>. Ich baue moderne, schnelle und mobilfreundliche Websites für kleine Unternehmen und Selbstständige.</p>
+          <p class="en-text">I'm a Computer Science student in my 8th semester at THM Gießen and run a small freelance web development business. I build modern, fast, and mobile-friendly websites for small businesses and self-employed professionals.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">6.</span>
+            <span class="stat-label de-text">Semester</span>
+            <span class="stat-label en-text">Semester</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">∞</span>
+            <span class="stat-label de-text">Energy Drinks</span>
+            <span class="stat-label en-text">Energy Drinks</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">3+</span>
+            <span class="stat-label de-text">Projekte</span>
+            <span class="stat-label en-text">Projects</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">◈</div>
+          <h3>Frontend</h3>
+          <p>HTML · CSS · JavaScript · Responsive Design</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">◆</div>
+          <h3>Tools</h3>
+          <p>Git · GitHub · VS Code · GitLab Pages</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">◉</div>
+          <h3>Design</h3>
+          <p>UI/UX · Figma · CSS Animationen · SEO</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">◇</div>
+          <h3>Backend</h3>
+          <p>Java · Python · SQL · REST APIs</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJEKTE -->
+    <section class="section" id="projects">
+      <h2 class="section-title">
+        <span class="de-text">Projekte</span>
+        <span class="en-text">Projects</span>
+      </h2>
+      <div class="projects-grid">
+        <a href="https://weberschelle-ducl94-a31b9a275fb6bb447fadf0aefa67eabae659ce69264.git-pages.thm.de/" class="project-card" target="_blank" rel="noopener">
+          <div class="project-tag de-text">Freelance</div>
+          <div class="project-tag en-text">Freelance</div>
+          <h3 class="de-text">Firmenwebsite</h3>
+          <h3 class="en-text">Business Website</h3>
+          <p class="de-text">Website für die Firma eines Freundes – responsives Design, modernes Layout.</p>
+          <p class="en-text">Website built for a friend's company – responsive design, modern layout.</p>
+          <span class="project-link">Ansehen ↗</span>
+        </a>
+        <a href="https://ducl94.git-pages.thm.de/css-zen-garden/" class="project-card" target="_blank" rel="noopener">
+          <div class="project-tag">THM</div>
+          <h3>CSS Zen Garden</h3>
+          <p class="de-text">Eigene Interpretation des CSS Zen Garden – Cyberpunk-Ästhetik, pure CSS.</p>
+          <p class="en-text">Custom CSS Zen Garden interpretation – cyberpunk aesthetic, pure CSS.</p>
+          <span class="project-link">Ansehen ↗</span>
+        </a>
+        <div class="project-card project-wip">
+          <div class="project-tag">WIP</div>
+          <h3>Polats Kebaphaus</h3>
+          <p class="de-text">Restaurant-Website für einen lokalen Döner-Imbiss in Echzell. Lokales SEO, JSON-LD.</p>
+          <p class="en-text">Restaurant website for a local kebab shop in Echzell. Local SEO, JSON-LD.</p>
+          <span class="project-link de-text">In Arbeit…</span>
+          <span class="project-link en-text">In progress…</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="section" id="contact">
+      <h2 class="section-title">
+        <span class="de-text">Kontakt</span>
+        <span class="en-text">Contact</span>
+      </h2>
+      <div class="contact-box">
+        <p class="de-text">Du brauchst eine Website oder hast ein Projekt? Meld dich einfach – ich antworte schnell.</p>
+        <p class="en-text">Need a website or have a project in mind? Just reach out – I reply fast.</p>
+        <a href="mailto:dogu.uc@gmail.com" class="btn-primary">dogu.uc@gmail.com</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 Dogu Ulas Celik · Webentwicklung Dogu Ulas Celik · Kleinunternehmer</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

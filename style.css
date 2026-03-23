@@ -542,6 +542,15 @@ span.de-text, a.de-text { display: inline; }
   line-height: 1.4;
 }
 
+.hosting-hint {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--c-border);
+  font-size: 0.75rem;
+  color: var(--c-muted);
+  letter-spacing: 0.05em;
+}
+
 .pricing-note {
   font-size: 0.75rem;
   color: var(--c-muted);
